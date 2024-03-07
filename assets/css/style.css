@@ -1,0 +1,61 @@
+
+
+.tweet-heart {
+    background-color: transparent;
+    background-image: url('../img/web_heart_animation.png');
+    border: none;
+    cursor: pointer;
+    height: 100px;
+    outline: none;
+    width: 100px;
+    transition: all ease-out 800ms;
+}
+.is-liked {
+    animation-name: like;
+    animation-duration: 800ms;
+    animation-timing-function: steps(28);
+    animation-fill-mode: forwards;
+    color: red;
+}
+
+@keyframes like {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: right;
+    }
+}
+.like-container{
+    position: fixed;
+    bottom: 40px;
+    z-index: 99999999;
+    right: -9px;
+}
+.middle-wrapper p{
+    text-align: center;
+    margin-top: 10px;
+    margin-right: -51px;
+    font-size: 16px;
+    height: fit-content;
+}
+.comment{
+    counter-reset:line-numbering;
+    background:#2c3e50;
+    padding:12px 0px 14px 0;
+    width:600px;
+    color:#ecf0f1;
+    line-height:140%;
+      .line::before {
+        content: counter(line-numbering);
+        counter-increment: line-numbering;
+        padding-right: 1em;
+        /* space after numbers */
+        padding-left:8px;
+        width: 1.5em;
+        text-align: right;
+        opacity: 0.5;
+        color:white;
+      }
+
+}
